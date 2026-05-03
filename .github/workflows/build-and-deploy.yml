@@ -46,10 +46,23 @@ jobs:
           name: web-gate-build
           path: build
 
-      - name: Install deploy tools
-        run: sudo apt-get update && sudo apt-get install -y sshpass rsync
+      - name: Cache deploy tool packages
+        uses: actions/cache@v4
+        with:
+          path: ~/apt-cache
+          key: ${{ runner.os }}-apt-deploy-tools-v1
 
+      - name: Install deploy tools
+        run: |
+          mkdir -p ~/apt-cache/archives/partial
+          sudo apt-get update
+          sudo apt-get \
+            -o Dir::Cache::Archives="$HOME/apt-cache/archives" \
+            install -y --download-only sshpass rsync
+          sudo apt-get \
+            -o Dir::Cache::Archives="$HOME/apt-cache/archives" \
+            install -y sshpass rsync
       - name: Deploy
         env:
-          SSHPASS: ${{ secrets.SERVER_SSH_PASSWORD }}
+          SSHPASS: ${{ secrets.SSHPASS }}
         run: bash scripts/deploy.sh
