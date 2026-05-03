@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Enable Corepack
@@ -30,7 +30,7 @@ jobs:
         run: yarn build
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: web-gate-build
           path: build
@@ -41,30 +41,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: web-gate-build
           path: build
 
-      - name: Cache deploy tool packages
-        uses: actions/cache@v4
-        with:
-          path: ~/apt-cache
-          key: ${{ runner.os }}-apt-deploy-tools-v1
-
       - name: Install deploy tools
         run: |
-          mkdir -p ~/apt-cache/archives/partial
           sudo apt-get update
-          sudo apt-get \
-            -o Dir::Cache::Archives="$HOME/apt-cache/archives" \
-            install -y --download-only sshpass rsync
-          sudo apt-get \
-            -o Dir::Cache::Archives="$HOME/apt-cache/archives" \
-            install -y sshpass rsync
+          sudo apt-get install -y sshpass rsync
       - name: Deploy
         env:
           SSHPASS: ${{ secrets.SSHPASS }}
