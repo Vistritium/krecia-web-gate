@@ -65,7 +65,7 @@ test('renders devices loaded from public data', async () => {
 });
 
 test('renders active alarms from alarm info endpoint', async () => {
-  window.history.pushState({}, '', '/alarms');
+  window.history.pushState({}, '', '/alarms/');
 
   const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue({
     ok: true,

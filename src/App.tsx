@@ -6,7 +6,9 @@ import Devices from "./Device";
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
-    if (window.location.pathname === '/alarms') {
+    const pathname = window.location.pathname.replace(/\/+$/, '');
+
+    if (pathname === '/alarms') {
         return <AlarmsPage/>;
     }
 
