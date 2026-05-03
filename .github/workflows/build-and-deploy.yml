@@ -1,10 +1,6 @@
 name: Build and deploy
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -37,7 +33,6 @@ jobs:
           path: build
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
 
@@ -56,5 +51,5 @@ jobs:
 
       - name: Deploy
         env:
-          SSHPASS: ${{ secrets.SSHPASS }}
+          SSHPASS: ${{ secrets.SERVER_SSH_PASSWORD }}
         run: bash scripts/deploy.sh

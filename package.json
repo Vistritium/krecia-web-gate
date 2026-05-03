@@ -3,33 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.68",
-    "@types/ramda": "^0.29.9",
-    "@types/react": "^18.2.46",
-    "@types/react-dom": "^18.2.18",
-    "bootstrap": "^5.3.2",
-    "ramda": "^0.29.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "ramda": "^0.32.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "web-vitals": "^5.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run"
   },
   "browserslist": {
     "production": [
@@ -43,8 +27,21 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.14.1",
   "devDependencies": {
-    "@types/bootstrap": "^5"
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/bootstrap": "^5.2.10",
+    "@types/node": "^25.6.0",
+    "@types/ramda": "^0.31.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^29.1.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
   }
 }
