@@ -1,0 +1,1318 @@
+{
+ "entries": [
+  {
+   "name": "router LTE",
+   "id": "router-lte",
+   "mac_address": null,
+   "ip": "192.168.74.1",
+   "tags": [
+    "router"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "router-lte",
+    "ip": "192.168.74.1",
+    "domain_records": [
+     {
+      "name": "router-lte.krecia.maciejnowicki.com",
+      "device_id": "router-lte",
+      "ip": "192.168.74.1"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "Asus-AX53U",
+   "id": "router-wrt",
+   "mac_address": null,
+   "ip": "192.168.75.1",
+   "tags": [
+    "router"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "router-wrt",
+    "ip": "192.168.75.1",
+    "domain_records": [
+     {
+      "name": "router-wrt.krecia.maciejnowicki.com",
+      "device_id": "router-wrt",
+      "ip": "192.168.75.1"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "TP-Link Archer C50 (AP)",
+   "id": "wifi-12",
+   "mac_address": "B0:4E:26:E6:46:E3",
+   "ip": "192.168.75.12",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-12",
+     "domain": "wifi-12.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-12",
+    "ip": "192.168.75.12",
+    "domain_records": [
+     {
+      "name": "wifi-12.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-12",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.12"
+     },
+     {
+      "name": "wifi-12.krecia.maciejnowicki.com",
+      "device_id": "wifi-12",
+      "ip": "192.168.75.12"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-12",
+      "domain": "wifi-12.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "TP-Link TL-WA801ND",
+   "id": "wifi-13",
+   "mac_address": "F8:1A:67:06:BE:D0",
+   "ip": "192.168.75.13",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-13",
+     "domain": "wifi-13.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-13",
+    "ip": "192.168.75.13",
+    "domain_records": [
+     {
+      "name": "wifi-13.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-13",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.13"
+     },
+     {
+      "name": "wifi-13.krecia.maciejnowicki.com",
+      "device_id": "wifi-13",
+      "ip": "192.168.75.13"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-13",
+      "domain": "wifi-13.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Tenda F6 (AP)",
+   "id": "wifi-75g",
+   "mac_address": "B4:0F:3B:E6:2B:00",
+   "ip": "192.168.75.21",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-75g",
+     "domain": "wifi-75g.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-75g",
+    "ip": "192.168.75.21",
+    "domain_records": [
+     {
+      "name": "wifi-75g.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-75g",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.21"
+     },
+     {
+      "name": "wifi-75g.krecia.maciejnowicki.com",
+      "device_id": "wifi-75g",
+      "ip": "192.168.75.21"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-75g",
+      "domain": "wifi-75g.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Tenda F6 (AP)",
+   "id": "wifi-75h",
+   "mac_address": "B4:0F:3B:E6:3C:C0",
+   "ip": "192.168.75.22",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-75h",
+     "domain": "wifi-75h.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-75h",
+    "ip": "192.168.75.22",
+    "domain_records": [
+     {
+      "name": "wifi-75h.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-75h",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.22"
+     },
+     {
+      "name": "wifi-75h.krecia.maciejnowicki.com",
+      "device_id": "wifi-75h",
+      "ip": "192.168.75.22"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-75h",
+      "domain": "wifi-75h.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Tenda F6 (AP)",
+   "id": "wifi-77g",
+   "mac_address": "B4:0F:3B:E6:2E:78",
+   "ip": "192.168.75.31",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-77g",
+     "domain": "wifi-77g.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-77g",
+    "ip": "192.168.75.31",
+    "domain_records": [
+     {
+      "name": "wifi-77g.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-77g",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.31"
+     },
+     {
+      "name": "wifi-77g.krecia.maciejnowicki.com",
+      "device_id": "wifi-77g",
+      "ip": "192.168.75.31"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-77g",
+      "domain": "wifi-77g.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Tenda F6 (AP)",
+   "id": "wifi-77h",
+   "mac_address": "B4:0F:3B:E6:5E:C8",
+   "ip": "192.168.75.32",
+   "tags": [
+    "ap"
+   ],
+   "web_endpoints": [
+    {
+     "port": "80",
+     "name": "wifi-77h",
+     "domain": "wifi-77h.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "wifi-77h",
+    "ip": "192.168.75.32",
+    "domain_records": [
+     {
+      "name": "wifi-77h.web.krecia.maciejnowicki.com",
+      "device_id": "wifi-77h",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.32"
+     },
+     {
+      "name": "wifi-77h.krecia.maciejnowicki.com",
+      "device_id": "wifi-77h",
+      "ip": "192.168.75.32"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "80",
+      "name": "wifi-77h",
+      "domain": "wifi-77h.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Kret-Ubuntu",
+   "id": "server",
+   "mac_address": "7C:10:C9:22:C0:11",
+   "ip": "192.168.75.52",
+   "tags": [
+    "server"
+   ],
+   "web_endpoints": [
+    {
+     "port": "5001",
+     "name": "frigate",
+     "domain": "frigate.web.krecia.maciejnowicki.com"
+    },
+    {
+     "port": "8123",
+     "name": "smart",
+     "domain": "smart.web.krecia.maciejnowicki.com"
+    },
+    {
+     "port": "5002",
+     "name": "serverapp",
+     "domain": "serverapp.web.krecia.maciejnowicki.com"
+    }
+   ],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "server",
+    "ip": "192.168.75.52",
+    "domain_records": [
+     {
+      "name": "frigate.web.krecia.maciejnowicki.com",
+      "device_id": "server",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.52"
+     },
+     {
+      "name": "smart.web.krecia.maciejnowicki.com",
+      "device_id": "server",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.52"
+     },
+     {
+      "name": "serverapp.web.krecia.maciejnowicki.com",
+      "device_id": "server",
+      "cname": "krecia.maciejnowicki.com",
+      "ip": "192.168.75.52"
+     },
+     {
+      "name": "server.krecia.maciejnowicki.com",
+      "device_id": "server",
+      "ip": "192.168.75.52"
+     }
+    ],
+    "web_endpoints": [
+     {
+      "port": "5001",
+      "name": "frigate",
+      "domain": "frigate.web.krecia.maciejnowicki.com"
+     },
+     {
+      "port": "8123",
+      "name": "smart",
+      "domain": "smart.web.krecia.maciejnowicki.com"
+     },
+     {
+      "port": "5002",
+      "name": "serverapp",
+      "domain": "serverapp.web.krecia.maciejnowicki.com"
+     }
+    ]
+   }
+  },
+  {
+   "name": "ESP32-S3 ETH",
+   "id": "door-gate-controller",
+   "mac_address": "54:60:09:5F:38:DC",
+   "ip": "192.168.75.71",
+   "tags": [
+    "iot"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "door-gate-controller",
+    "ip": "192.168.75.71",
+    "domain_records": [
+     {
+      "name": "door-gate-controller.krecia.maciejnowicki.com",
+      "device_id": "door-gate-controller",
+      "ip": "192.168.75.71"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "Ctronics CTIPC-285C 5MP",
+   "id": "cam-ctronics",
+   "mac_address": "70:F1:1C:5D:4E:EC",
+   "ip": "192.168.75.101",
+   "tags": [
+    "cam"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam-ctronics",
+    "port": "554",
+    "suffix": "/11",
+    "detect_suffix": "/12",
+    "user": "",
+    "password": "",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 21,
+    "detect": false
+   },
+   "domain_entries": {
+    "id": "cam-ctronics",
+    "ip": "192.168.75.101",
+    "domain_records": [
+     {
+      "name": "cam-ctronics.krecia.maciejnowicki.com",
+      "device_id": "cam-ctronics",
+      "ip": "192.168.75.101"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "ieGeek IE50",
+   "id": "cam-iegeek",
+   "mac_address": "E0:09:BF:7C:31:17",
+   "ip": "192.168.75.102",
+   "tags": [
+    "cam"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam-iegeek",
+    "port": "554",
+    "suffix": "/11",
+    "detect_suffix": "/12",
+    "user": "",
+    "password": "",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 22,
+    "detect": false
+   },
+   "domain_entries": {
+    "id": "cam-iegeek",
+    "ip": "192.168.75.102",
+    "domain_records": [
+     {
+      "name": "cam-iegeek.krecia.maciejnowicki.com",
+      "device_id": "cam-iegeek",
+      "ip": "192.168.75.102"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "Wanscam HW0038",
+   "id": "cam-wanscam",
+   "mac_address": "00:0C:43:B0:60:76",
+   "ip": "192.168.75.103",
+   "tags": [
+    "cam"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam-wanscam",
+    "port": "554",
+    "suffix": "/11",
+    "detect_suffix": "/11",
+    "user": "admin",
+    "password": "Rin*9999",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 23,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam-wanscam",
+    "ip": "192.168.75.103",
+    "domain_records": [
+     {
+      "name": "cam-wanscam.krecia.maciejnowicki.com",
+      "device_id": "cam-wanscam",
+      "ip": "192.168.75.103"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "DoHonest S02",
+   "id": "camera-f",
+   "mac_address": "08:6F:48:72:B3:68",
+   "ip": "192.168.75.104",
+   "tags": [
+    "cam"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "camera-f",
+    "ip": "192.168.75.104",
+    "domain_records": [
+     {
+      "name": "camera-f.krecia.maciejnowicki.com",
+      "device_id": "camera-f",
+      "ip": "192.168.75.104"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "DoHonest S02",
+   "id": "camera-g",
+   "mac_address": "08:6F:48:72:9F:D2",
+   "ip": "192.168.75.105",
+   "tags": [
+    "cam"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "camera-g",
+    "ip": "192.168.75.105",
+    "domain_records": [
+     {
+      "name": "camera-g.krecia.maciejnowicki.com",
+      "device_id": "camera-g",
+      "ip": "192.168.75.105"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam11-letnisko-1",
+   "mac_address": "00:12:33:E1:9D:DC",
+   "ip": "192.168.75.111",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam11-letnisko-1",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 1,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam11-letnisko-1",
+    "ip": "192.168.75.111",
+    "domain_records": [
+     {
+      "name": "cam11-letnisko-1.krecia.maciejnowicki.com",
+      "device_id": "cam11-letnisko-1",
+      "ip": "192.168.75.111"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam12-letnisko-2",
+   "mac_address": "00:12:33:DE:7C:7C",
+   "ip": "192.168.75.112",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam12-letnisko-2",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 2,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam12-letnisko-2",
+    "ip": "192.168.75.112",
+    "domain_records": [
+     {
+      "name": "cam12-letnisko-2.krecia.maciejnowicki.com",
+      "device_id": "cam12-letnisko-2",
+      "ip": "192.168.75.112"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam13-letnisko-3",
+   "mac_address": "00:13:00:3A:58:24",
+   "ip": "192.168.75.113",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam13-letnisko-3",
+    "port": "554",
+    "suffix": "/?channel=0&stream=1",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [],
+    "car_masks": [],
+    "order": 3,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam13-letnisko-3",
+    "ip": "192.168.75.113",
+    "domain_records": [
+     {
+      "name": "cam13-letnisko-3.krecia.maciejnowicki.com",
+      "device_id": "cam13-letnisko-3",
+      "ip": "192.168.75.113"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam14-letnisko-4",
+   "mac_address": "00:12:43:9A:40:95",
+   "ip": "192.168.75.114",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam14-letnisko-4",
+    "port": "554",
+    "suffix": "/?channel=0&stream=1",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [],
+    "car_masks": [],
+    "order": 4,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam14-letnisko-4",
+    "ip": "192.168.75.114",
+    "domain_records": [
+     {
+      "name": "cam14-letnisko-4.krecia.maciejnowicki.com",
+      "device_id": "cam14-letnisko-4",
+      "ip": "192.168.75.114"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam15-letnisko-5",
+   "mac_address": "00:12:34:05:79:C9",
+   "ip": "192.168.75.115",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam15-letnisko-5",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [],
+    "car_masks": [],
+    "order": 5,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam15-letnisko-5",
+    "ip": "192.168.75.115",
+    "domain_records": [
+     {
+      "name": "cam15-letnisko-5.krecia.maciejnowicki.com",
+      "device_id": "cam15-letnisko-5",
+      "ip": "192.168.75.115"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam16-letnisko-6",
+   "mac_address": "00:12:34:05:70:22",
+   "ip": "192.168.75.116",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam16-letnisko-6",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [],
+    "car_masks": [],
+    "order": 6,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam16-letnisko-6",
+    "ip": "192.168.75.116",
+    "domain_records": [
+     {
+      "name": "cam16-letnisko-6.krecia.maciejnowicki.com",
+      "device_id": "cam16-letnisko-6",
+      "ip": "192.168.75.116"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam17-altana-1",
+   "mac_address": "00:12:43:98:96:1D",
+   "ip": "192.168.75.117",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam17-altana-1",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [
+     "0.65,0.232,0.641,0.327,0.719,0.328,0.733,0.238"
+    ],
+    "car_masks": [],
+    "order": 7,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam17-altana-1",
+    "ip": "192.168.75.117",
+    "domain_records": [
+     {
+      "name": "cam17-altana-1.krecia.maciejnowicki.com",
+      "device_id": "cam17-altana-1",
+      "ip": "192.168.75.117"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam18-altana-2",
+   "mac_address": "00:12:43:98:A5:F7",
+   "ip": "192.168.75.118",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam18-altana-2",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 8,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam18-altana-2",
+    "ip": "192.168.75.118",
+    "domain_records": [
+     {
+      "name": "cam18-altana-2.krecia.maciejnowicki.com",
+      "device_id": "cam18-altana-2",
+      "ip": "192.168.75.118"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam19-altana-3",
+   "mac_address": "00:12:34:42:5A:E7",
+   "ip": "192.168.75.119",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam19-altana-3",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 9,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam19-altana-3",
+    "ip": "192.168.75.119",
+    "domain_records": [
+     {
+      "name": "cam19-altana-3.krecia.maciejnowicki.com",
+      "device_id": "cam19-altana-3",
+      "ip": "192.168.75.119"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam21-dom75-1",
+   "mac_address": "6C:22:1A:B3:F9:FC",
+   "ip": "192.168.75.121",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam21-dom75-1",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [
+     "0.407,0.108,0.72,0.109,0.721,0,0.332,0"
+    ],
+    "car_masks": [
+     "0.281,0.562,0.63,0.555,0.643,0.498,0.243,0.493"
+    ],
+    "order": 13,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam21-dom75-1",
+    "ip": "192.168.75.121",
+    "domain_records": [
+     {
+      "name": "cam21-dom75-1.krecia.maciejnowicki.com",
+      "device_id": "cam21-dom75-1",
+      "ip": "192.168.75.121"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam22-dom75-2",
+   "mac_address": "6C:22:1A:B5:C7:F2",
+   "ip": "192.168.75.122",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam22-dom75-2",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 14,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam22-dom75-2",
+    "ip": "192.168.75.122",
+    "domain_records": [
+     {
+      "name": "cam22-dom75-2.krecia.maciejnowicki.com",
+      "device_id": "cam22-dom75-2",
+      "ip": "192.168.75.122"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam23-dom75-3",
+   "mac_address": "6C:22:1A:B3:73:2C",
+   "ip": "192.168.75.123",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam23-dom75-3",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 15,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam23-dom75-3",
+    "ip": "192.168.75.123",
+    "domain_records": [
+     {
+      "name": "cam23-dom75-3.krecia.maciejnowicki.com",
+      "device_id": "cam23-dom75-3",
+      "ip": "192.168.75.123"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam24-dom75-4",
+   "mac_address": "6C:22:1A:B6:0E:EB",
+   "ip": "192.168.75.124",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam24-dom75-4",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [
+     "0,0.44,1,0.443,1,1,0,1"
+    ],
+    "order": 16,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam24-dom75-4",
+    "ip": "192.168.75.124",
+    "domain_records": [
+     {
+      "name": "cam24-dom75-4.krecia.maciejnowicki.com",
+      "device_id": "cam24-dom75-4",
+      "ip": "192.168.75.124"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6-WEQ",
+   "id": "cam31-dom77-1",
+   "mac_address": "D4:A3:EB:78:AE:08",
+   "ip": "192.168.75.131",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam31-dom77-1",
+    "port": "554",
+    "suffix": "/?channel=0&stream=1",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [
+     "0.315,0,0.487,0,0.527,0.229,0.201,0.225",
+     "0,0.395,0.2,0.459,0.206,0.745,0,0.788"
+    ],
+    "order": 17,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam31-dom77-1",
+    "ip": "192.168.75.131",
+    "domain_records": [
+     {
+      "name": "cam31-dom77-1.krecia.maciejnowicki.com",
+      "device_id": "cam31-dom77-1",
+      "ip": "192.168.75.131"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6-WEQ",
+   "id": "cam32-dom77-2",
+   "mac_address": "D4:A3:EB:B1:6F:04",
+   "ip": "192.168.75.132",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam32-dom77-2",
+    "port": "554",
+    "suffix": "/?channel=0&stream=1",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 18,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam32-dom77-2",
+    "ip": "192.168.75.132",
+    "domain_records": [
+     {
+      "name": "cam32-dom77-2.krecia.maciejnowicki.com",
+      "device_id": "cam32-dom77-2",
+      "ip": "192.168.75.132"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6-WEQ",
+   "id": "cam33-dom77-3",
+   "mac_address": "D4:A3:EB:9E:97:A4",
+   "ip": "192.168.75.133",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam33-dom77-3",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [],
+    "order": 19,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam33-dom77-3",
+    "ip": "192.168.75.133",
+    "domain_records": [
+     {
+      "name": "cam33-dom77-3.krecia.maciejnowicki.com",
+      "device_id": "cam33-dom77-3",
+      "ip": "192.168.75.133"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6-WEQ",
+   "id": "cam34-dom77-4",
+   "mac_address": "D4:A3:EB:AE:4E:02",
+   "ip": "192.168.75.134",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam34-dom77-4",
+    "port": "554",
+    "suffix": "/?channel=0&stream=1",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [
+     "1,0.388,0.6,0.182,0.56,0,1,0",
+     "0.833,0.637,0.996,0.729,0.999,0.501,0.819,0.501"
+    ],
+    "car_masks": [],
+    "order": 20,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam34-dom77-4",
+    "ip": "192.168.75.134",
+    "domain_records": [
+     {
+      "name": "cam34-dom77-4.krecia.maciejnowicki.com",
+      "device_id": "cam34-dom77-4",
+      "ip": "192.168.75.134"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam41-slup-1",
+   "mac_address": "20:98:ED:37:9E:27",
+   "ip": "192.168.75.141",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam41-slup-1",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [],
+    "car_masks": [
+     "0.131,0.501,0.238,0.531,0.275,0.607,0.214,0.704,0.077,0.719,0.032,0.65,0.054,0.544",
+     "0.487,0.202,0.53,0.128,0.604,0.104,0.675,0.168,0.664,0.238,0.584,0.294,0.49,0.279"
+    ],
+    "order": 10,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam41-slup-1",
+    "ip": "192.168.75.141",
+    "domain_records": [
+     {
+      "name": "cam41-slup-1.krecia.maciejnowicki.com",
+      "device_id": "cam41-slup-1",
+      "ip": "192.168.75.141"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6E-WEQ",
+   "id": "cam42-slup-2",
+   "mac_address": "20:98:ED:4B:EA:8D",
+   "ip": "192.168.75.142",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam42-slup-2",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [],
+    "masks": [
+     "0.066,0.704,0.675,0.703,1,0.678,1,0.46,0,0.456",
+     "0,0.262,0.364,0.241,0.427,0,0,0"
+    ],
+    "car_masks": [],
+    "order": 11,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam42-slup-2",
+    "ip": "192.168.75.142",
+    "domain_records": [
+     {
+      "name": "cam42-slup-2.krecia.maciejnowicki.com",
+      "device_id": "cam42-slup-2",
+      "ip": "192.168.75.142"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "X6C-WEQ",
+   "id": "cam43-garaz",
+   "mac_address": "20:98:ED:48:BC:2F",
+   "ip": "192.168.75.143",
+   "tags": [
+    "cam",
+    "icsee"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": {
+    "id": "cam43-garaz",
+    "port": "554",
+    "suffix": "/?channel=0&stream=0",
+    "detect_suffix": "/?channel=0&stream=1",
+    "user": "krecik",
+    "password": "Rin*9900",
+    "options": [
+     "person_only"
+    ],
+    "masks": [],
+    "car_masks": [],
+    "order": 12,
+    "detect": null
+   },
+   "domain_entries": {
+    "id": "cam43-garaz",
+    "ip": "192.168.75.143",
+    "domain_records": [
+     {
+      "name": "cam43-garaz.krecia.maciejnowicki.com",
+      "device_id": "cam43-garaz",
+      "ip": "192.168.75.143"
+     }
+    ],
+    "web_endpoints": []
+   }
+  },
+  {
+   "name": "Nibe S1156-18 EM",
+   "id": "heat-pump",
+   "mac_address": "64:8C:BB:BA:7D:80",
+   "ip": "192.168.75.151",
+   "tags": [
+    "pump"
+   ],
+   "web_endpoints": [],
+   "rtsp_endpoint": null,
+   "domain_entries": {
+    "id": "heat-pump",
+    "ip": "192.168.75.151",
+    "domain_records": [
+     {
+      "name": "heat-pump.krecia.maciejnowicki.com",
+      "device_id": "heat-pump",
+      "ip": "192.168.75.151"
+     }
+    ],
+    "web_endpoints": []
+   }
+  }
+ ]
+}

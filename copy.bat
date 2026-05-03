@@ -1,0 +1,1 @@
+xcopy C:\work\maciej\web-gate\build C:\work\infra\kret\web-gate\content\static /E
