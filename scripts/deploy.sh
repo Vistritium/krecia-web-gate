@@ -15,7 +15,7 @@ DEPLOY_PORT="${DEPLOY_PORT:-8066}"
 
 COPY_HOST="${COPY_HOST:-krecia.maciejnowicki.com}"
 
-REMOTE_DIR="${REMOTE_DIR:-/home/kret/infra/kret-server/web-gate/content/static}"
+REMOTE_DIR="${REMOTE_DIR:-/home/kret/infra/kret-server/web-gate/content/webapp}"
 
 : "${SSHPASS:?SSHPASS is required}"
 

@@ -1,4 +1,4 @@
-import {render, screen, waitFor, within} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor, within} from '@testing-library/react';
 import {afterEach, expect, test, vi} from 'vitest';
 import App from './App';
 import {KreciaDevices} from './dto/krecia_devices';
@@ -64,6 +64,41 @@ test('renders devices loaded from public data', async () => {
   expect(screen.getByText('device-1.example.com')).toBeInTheDocument();
 });
 
+test('renders alarms inside the main page navigation', async () => {
+  vi.spyOn(globalThis, 'fetch').mockImplementation(async (input) => {
+    if (String(input).includes('alarm_info')) {
+      return {
+        ok: true,
+        json: async () => ({
+          alarms: [
+            {
+              name: 'KreciaAppAlarm',
+              triggered: true,
+              date: '2026-05-03T17:59:31.757604054Z',
+              triggeredByAlarms: ['devices_3_alarms_4_duration_10'],
+            },
+          ],
+          providerFailures: [],
+        }),
+      } as Response;
+    }
+
+    return {
+      json: async () => ({entries: []}),
+    } as Response;
+  });
+
+  render(<App />);
+
+  fireEvent.click(screen.getByRole('button', {name: 'Alarms'}));
+
+  expect(screen.getByRole('navigation', {name: 'Główna nawigacja'})).toBeInTheDocument();
+
+  await waitFor(() => {
+    expect(screen.getByRole('heading', {name: 'alarm'})).toBeInTheDocument();
+  });
+});
+
 test('renders active alarms from alarm info endpoint', async () => {
   window.history.pushState({}, '', '/alarms/');
 
@@ -92,6 +127,8 @@ test('renders active alarms from alarm info endpoint', async () => {
   } as Response);
 
   render(<App />);
+
+  expect(screen.queryByRole('navigation', {name: 'Główna nawigacja'})).not.toBeInTheDocument();
 
   await waitFor(() => {
     expect(screen.getByRole('heading', {name: 'alarm'})).toBeInTheDocument();
