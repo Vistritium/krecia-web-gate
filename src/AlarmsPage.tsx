@@ -1,5 +1,4 @@
 import {useEffect, useMemo, useState} from 'react';
-import './AlarmsPage.css';
 
 const ALARM_INFO_URL = 'https://p0ihs7rrth.execute-api.eu-west-1.amazonaws.com/prod/alarm_info';
 const BASIC_AUTH_HEADER = `Basic ${btoa('kret:piwkoBasenTaczkaSzklanka*1')}`;
@@ -63,27 +62,27 @@ function AlarmsPage() {
     );
 
     return (
-        <main className="alarms-page">
-            <section className="alarms-content" aria-labelledby="alarms-title">
-                <div className="alarms-header">
-                    <p className="alarms-eyebrow">Aktywne alarmy</p>
-                    <h1 id="alarms-title">Stan alarmów</h1>
+        <main className="min-h-screen bg-base-200 text-base-content">
+            <section className="mx-auto w-full max-w-3xl px-4 py-8 sm:py-10" aria-labelledby="alarms-title">
+                <div className="mb-5">
+                    <p className="mb-1 text-xs font-bold uppercase text-base-content/60">Aktywne alarmy</p>
+                    <h1 id="alarms-title" className="text-2xl font-bold">Stan alarmów</h1>
                 </div>
 
                 {!alarmInfo && !error ? (
-                    <div className="alarms-status">Ładowanie...</div>
+                    <div className="alert bg-base-100">Ładowanie...</div>
                 ) : null}
 
                 {error ? (
-                    <div className="alarms-error" role="alert">{error}</div>
+                    <div className="alert alert-error" role="alert">{error}</div>
                 ) : null}
 
                 {alarmInfo && triggeredAlarms.length === 0 ? (
-                    <div className="alarms-empty">Brak aktywnych alarmów.</div>
+                    <div className="alert bg-base-100">Brak aktywnych alarmów.</div>
                 ) : null}
 
                 {triggeredAlarms.length > 0 ? (
-                    <div className="alarms-list">
+                    <div className="grid gap-3">
                         {triggeredAlarms.map(alarm => (
                             <AlarmCard alarm={alarm} key={alarm.name}/>
                         ))}
@@ -99,29 +98,31 @@ function AlarmCard({alarm}: { alarm: AlarmInfo }) {
     const triggeredAt = alarm.date ? formatDate(alarm.date) : 'Brak daty';
 
     return (
-        <article className="alarm-card">
-            <div className="alarm-card-header">
-                <h2>{label}</h2>
-            </div>
-
-            <dl className="alarm-details">
+        <article className="card border border-error/30 border-l-4 border-l-error bg-base-100 shadow-sm">
+            <div className="card-body gap-4 p-5 sm:p-6">
                 <div>
-                    <dt>Uruchomiony</dt>
-                    <dd>{triggeredAt}</dd>
+                    <h2 className="card-title text-xl">{label}</h2>
                 </div>
-                {alarm.triggeredByAlarms && alarm.triggeredByAlarms.length > 0 ? (
-                    <div>
-                        <dt>Powód</dt>
-                        <dd>
-                            <ul>
-                                {alarm.triggeredByAlarms.map(trigger => (
-                                    <li key={trigger}>{trigger}</li>
-                                ))}
-                            </ul>
-                        </dd>
+
+                <dl className="grid gap-4">
+                    <div className="grid gap-1">
+                        <dt className="text-xs font-bold uppercase text-base-content/60">Uruchomiony</dt>
+                        <dd className="font-semibold">{triggeredAt}</dd>
                     </div>
-                ) : null}
-            </dl>
+                    {alarm.triggeredByAlarms && alarm.triggeredByAlarms.length > 0 ? (
+                        <div className="grid gap-2">
+                            <dt className="text-xs font-bold uppercase text-base-content/60">Powód</dt>
+                            <dd>
+                                <ul className="grid gap-2">
+                                    {alarm.triggeredByAlarms.map(trigger => (
+                                        <li className="rounded bg-base-200 px-3 py-2 break-all" key={trigger}>{trigger}</li>
+                                    ))}
+                                </ul>
+                            </dd>
+                        </div>
+                    ) : null}
+                </dl>
+            </div>
         </article>
     );
 }

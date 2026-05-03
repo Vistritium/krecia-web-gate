@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
 import AlarmsPage from './AlarmsPage';
 import {KreciaDevices} from "./dto/krecia_devices";
 import Devices from "./Device";
-import 'bootstrap/dist/css/bootstrap.css';
-
-type MainPageTab = 'devices' | 'alarms';
+import {HashRouter, Navigate, NavLink, Route, Routes} from 'react-router-dom';
 
 function App() {
     const pathname = window.location.pathname.replace(/\/+$/, '');
@@ -14,55 +11,41 @@ function App() {
         return <AlarmsPage/>;
     }
 
-    return <MainPage/>;
-}
-
-function MainPage() {
-    const [selectedPage, setSelectedPage] = useState<MainPageTab>(() => getMainPageTabFromHash());
-
-    useEffect(() => {
-        const handleHashChange = () => setSelectedPage(getMainPageTabFromHash());
-
-        window.addEventListener('hashchange', handleHashChange);
-
-        return () => window.removeEventListener('hashchange', handleHashChange);
-    }, []);
-
-    const navigateToPage = (page: MainPageTab) => {
-        setSelectedPage(page);
-        window.location.hash = page;
-    };
-
     return (
-        <div className="App app-shell">
-            <nav className="app-navigation" aria-label="Główna nawigacja">
-                <button
-                    type="button"
-                    className={selectedPage === 'devices' ? 'active' : ''}
-                    onClick={() => navigateToPage('devices')}
-                >
-                    Krecia devices
-                </button>
-                <button
-                    type="button"
-                    className={selectedPage === 'alarms' ? 'active' : ''}
-                    onClick={() => navigateToPage('alarms')}
-                >
-                    Alarms
-                </button>
-            </nav>
-
-            <div className="app-page">
-                {selectedPage === 'devices' ? <DevicesPage/> : <AlarmsPage/>}
-            </div>
-        </div>
+        <HashRouter>
+            <MainPage/>
+        </HashRouter>
     );
 }
 
-function getMainPageTabFromHash(): MainPageTab {
-    const hash = window.location.hash.replace(/^#\/?/, '');
+function MainPage() {
+    return (
+        <div className="min-h-screen bg-base-200 text-base-content">
+            <nav className="sticky top-0 z-10 flex justify-center gap-2 border-b border-base-300 bg-base-100 px-4 py-3 shadow-sm" aria-label="Główna nawigacja">
+                <NavLink
+                    to="/devices"
+                    className={({isActive}) => `btn btn-sm ${isActive ? 'btn-primary' : 'btn-ghost'}`}
+                >
+                    Krecia devices
+                </NavLink>
+                <NavLink
+                    to="/alarms"
+                    className={({isActive}) => `btn btn-sm ${isActive ? 'btn-primary' : 'btn-ghost'}`}
+                >
+                    Alarms
+                </NavLink>
+            </nav>
 
-    return hash === 'alarms' ? 'alarms' : 'devices';
+            <div className="min-h-[calc(100vh-57px)]">
+                <Routes>
+                    <Route index element={<Navigate to="/devices" replace/>}/>
+                    <Route path="devices" element={<DevicesPage/>}/>
+                    <Route path="alarms" element={<AlarmsPage/>}/>
+                    <Route path="*" element={<Navigate to="/devices" replace/>}/>
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 function DevicesPage() {
@@ -84,7 +67,7 @@ function DevicesPage() {
     }, [])
 
     return (
-        <div className="devices-page">
+        <div className="min-h-[calc(100vh-57px)]">
             {networkData ? (
                 <Devices data={networkData} />
             ) : (

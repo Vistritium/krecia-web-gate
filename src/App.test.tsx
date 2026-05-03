@@ -90,9 +90,9 @@ test('renders alarms inside the main page navigation', async () => {
 
   render(<App />);
 
-  fireEvent.click(screen.getByRole('button', {name: 'Alarms'}));
+  fireEvent.click(screen.getByRole('link', {name: 'Alarms'}));
 
-  expect(window.location.hash).toBe('#alarms');
+  expect(window.location.hash).toBe('#/alarms');
   expect(screen.getByRole('navigation', {name: 'Główna nawigacja'})).toBeInTheDocument();
 
   await waitFor(() => {
@@ -101,7 +101,7 @@ test('renders alarms inside the main page navigation', async () => {
 });
 
 test('opens embedded alarms directly from hash url', async () => {
-  window.history.pushState({}, '', '/#alarms');
+  window.history.pushState({}, '', '/#/alarms');
 
   vi.spyOn(globalThis, 'fetch').mockResolvedValue({
     ok: true,

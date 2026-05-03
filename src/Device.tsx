@@ -12,26 +12,26 @@ function Devices({data}: { data: KreciaDevices }) {
     const allTags = ['all', ...availableTags]
 
     return (
-        <div className={"container"} style={{paddingTop: '30px'}}>
-            <div className="row">
-                <div className="col-lg-2">
-                    <div className="sticky-lg-top" style={{paddingTop: '30px'}}>
-                        <ul className="list-group">
+        <div className="mx-auto w-full max-w-6xl px-4 py-8">
+            <div className="grid gap-6 lg:grid-cols-[12rem_minmax(0,1fr)]">
+                <aside className="w-full lg:w-48 lg:shrink-0">
+                    <div className="lg:sticky lg:top-20">
+                        <div className="join join-vertical w-full">
                             {allTags.map(tag => (
                                 <button
                                     type="button"
-                                    className={`list-group-item list-group-item-action ${tag === selectedTag ? 'active' : ''}`}
+                                    className={`btn join-item justify-start normal-case ${tag === selectedTag ? 'btn-primary' : 'btn-outline'}`}
                                     key={tag}
                                     onClick={() => setSelectedTag(tag)}
                                 >
                                     {tag}
                                 </button>
                             ))}
-                        </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="col-lg-10">
-                    <div className="row justify-content-start">
+                </aside>
+                <main className="min-w-0">
+                    <div className="grid gap-4 lg:grid-cols-2">
                         {entries
                             .filter(elem => {
                                 if(selectedTag === "all") {
@@ -44,7 +44,7 @@ function Devices({data}: { data: KreciaDevices }) {
                             <Device key={elem.id} elem={elem}/>
                         ))}
                     </div>
-                </div>
+                </main>
 
             </div>
 
@@ -77,29 +77,33 @@ function Device({elem}: { elem: DeviceDataEntry }) {
 
 
     return (
-        <div className={"col-lg-6 border"}>
-            <h1>{elem.id}</h1>
-            {/*<a href={"//" + elem.ip}>*/}
-            {/*    <div>{elem.ip}</div>*/}
-            {/*</a>*/}
-            <table className={"table table-striped table-sm"}>
-                <tbody>
-                {elems.map((elem, index) => (
-                    <tr key={index}>
-                        <td>
-                            <div style={{textAlign: "right"}}>{elem.name}</div>
-                        </td>
-                        <td>
-                            <a href={"http://" + elem.link}>
-                                <div style={{textAlign: "left"}}>{elem.link}</div>
-                            </a>
-                        </td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
+        <article className="card min-w-0 border border-base-300 bg-base-100 shadow-sm">
+            <div className="card-body gap-4 p-5">
+                <h1 className="card-title text-xl">{elem.id}</h1>
+                {/*<a href={"//" + elem.ip}>*/}
+                {/*    <div>{elem.ip}</div>*/}
+                {/*</a>*/}
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra table-sm">
+                        <tbody>
+                        {elems.map((elem, index) => (
+                            <tr key={index}>
+                                <td className="w-28 text-right font-semibold text-base-content/70">
+                                    {elem.name}
+                                </td>
+                                <td className="text-left">
+                                    <a className="link link-primary break-all" href={"http://" + elem.link}>
+                                        {elem.link}
+                                    </a>
+                                </td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        </div>
+        </article>
     );
 }
 
