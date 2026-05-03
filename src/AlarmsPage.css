@@ -1,0 +1,118 @@
+.alarms-page {
+    min-height: 100vh;
+    background: #f4f6f8;
+    color: #17202a;
+}
+
+.alarms-content {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.alarms-header {
+    margin-bottom: 18px;
+}
+
+.alarms-eyebrow {
+    margin: 0 0 4px;
+    color: #6b7280;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.alarms-header h1 {
+    margin: 0;
+    font-size: 1.65rem;
+    font-weight: 750;
+}
+
+.alarms-status,
+.alarms-empty,
+.alarms-error {
+    border: 1px solid #d8dee4;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 16px;
+    font-weight: 600;
+}
+
+.alarms-error {
+    border-color: #f0b4b4;
+    background: #fff5f5;
+    color: #9b1c1c;
+}
+
+.alarms-list {
+    display: grid;
+    gap: 12px;
+}
+
+.alarm-card {
+    border: 1px solid #d8dee4;
+    border-left: 5px solid #d12f2f;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+.alarm-card-header {
+    margin-bottom: 16px;
+}
+
+.alarm-card-header h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 750;
+}
+
+.alarm-details {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+}
+
+.alarm-details div {
+    display: grid;
+    gap: 4px;
+}
+
+.alarm-details dt {
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.alarm-details dd {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.alarm-details ul {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.alarm-details li {
+    border-radius: 6px;
+    background: #f1f3f5;
+    padding: 8px 10px;
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) {
+    .alarms-content {
+        padding-top: 40px;
+    }
+
+    .alarm-card {
+        padding: 20px;
+    }
+}

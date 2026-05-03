@@ -1,10 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import AlarmsPage from './AlarmsPage';
 import {KreciaDevices} from "./dto/krecia_devices";
 import Devices from "./Device";
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
+    if (window.location.pathname === '/alarms') {
+        return <AlarmsPage/>;
+    }
+
+    return <DevicesPage/>;
+}
+
+function DevicesPage() {
 
     const [networkData, setJsonData] = useState<KreciaDevices | undefined>(undefined);
 
