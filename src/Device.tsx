@@ -18,12 +18,15 @@ function Devices({data}: { data: KreciaDevices }) {
                     <div className="sticky-lg-top" style={{paddingTop: '30px'}}>
                         <ul className="list-group">
                             {allTags.map(tag => (
-                                <a href="#" className="list-group-item-action" onClick={() => setSelectedTag(tag)}>
-                                    <li className={`list-group-item ${tag === selectedTag ? 'active' : ''}`} key={tag}>
-                                        {tag}
-                                </li>
-                                </a>
-                                ))}
+                                <button
+                                    type="button"
+                                    className={`list-group-item list-group-item-action ${tag === selectedTag ? 'active' : ''}`}
+                                    key={tag}
+                                    onClick={() => setSelectedTag(tag)}
+                                >
+                                    {tag}
+                                </button>
+                            ))}
                         </ul>
                     </div>
                 </div>
