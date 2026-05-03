@@ -92,6 +92,33 @@ test('renders alarms inside the main page navigation', async () => {
 
   fireEvent.click(screen.getByRole('button', {name: 'Alarms'}));
 
+  expect(window.location.hash).toBe('#alarms');
+  expect(screen.getByRole('navigation', {name: 'Główna nawigacja'})).toBeInTheDocument();
+
+  await waitFor(() => {
+    expect(screen.getByRole('heading', {name: 'alarm'})).toBeInTheDocument();
+  });
+});
+
+test('opens embedded alarms directly from hash url', async () => {
+  window.history.pushState({}, '', '/#alarms');
+
+  vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      alarms: [
+        {
+          name: 'KreciaAppAlarm',
+          triggered: true,
+          date: '2026-05-03T17:59:31.757604054Z',
+        },
+      ],
+      providerFailures: [],
+    }),
+  } as Response);
+
+  render(<App />);
+
   expect(screen.getByRole('navigation', {name: 'Główna nawigacja'})).toBeInTheDocument();
 
   await waitFor(() => {

@@ -5,7 +5,7 @@ import {KreciaDevices} from "./dto/krecia_devices";
 import Devices from "./Device";
 import 'bootstrap/dist/css/bootstrap.css';
 
-type MainPage = 'devices' | 'alarms';
+type MainPageTab = 'devices' | 'alarms';
 
 function App() {
     const pathname = window.location.pathname.replace(/\/+$/, '');
@@ -18,7 +18,20 @@ function App() {
 }
 
 function MainPage() {
-    const [selectedPage, setSelectedPage] = useState<MainPage>('devices');
+    const [selectedPage, setSelectedPage] = useState<MainPageTab>(() => getMainPageTabFromHash());
+
+    useEffect(() => {
+        const handleHashChange = () => setSelectedPage(getMainPageTabFromHash());
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
+
+    const navigateToPage = (page: MainPageTab) => {
+        setSelectedPage(page);
+        window.location.hash = page;
+    };
 
     return (
         <div className="App app-shell">
@@ -26,14 +39,14 @@ function MainPage() {
                 <button
                     type="button"
                     className={selectedPage === 'devices' ? 'active' : ''}
-                    onClick={() => setSelectedPage('devices')}
+                    onClick={() => navigateToPage('devices')}
                 >
                     Krecia devices
                 </button>
                 <button
                     type="button"
                     className={selectedPage === 'alarms' ? 'active' : ''}
-                    onClick={() => setSelectedPage('alarms')}
+                    onClick={() => navigateToPage('alarms')}
                 >
                     Alarms
                 </button>
@@ -44,6 +57,12 @@ function MainPage() {
             </div>
         </div>
     );
+}
+
+function getMainPageTabFromHash(): MainPageTab {
+    const hash = window.location.hash.replace(/^#\/?/, '');
+
+    return hash === 'alarms' ? 'alarms' : 'devices';
 }
 
 function DevicesPage() {
